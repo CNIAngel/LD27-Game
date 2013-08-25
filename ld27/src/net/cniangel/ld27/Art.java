@@ -8,10 +8,22 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
 public class Art {
 	
-	public static String alpha = "ABCDEFGH"+"IJKLMNOP"+"QRSTUVWX"+"YZ:12345"+"67890 ";
+	
+	public static TextureRegion[][] alphabet, tile, player, spike, way;
+	public static String alpha = "ABCDEFGH"+"IJKLMNOP"+"QRSTUVWX"+"YZ.: 123"+"4567890-";
+	public static Texture sky;
 	
 	public static void loadAll() {
 
+		// Load textures
+		sky = loadTexture("sky.png");
+		
+		// Load texture regions
+		alphabet = loadTexture("alpha.png", 16, 16);
+		tile = loadTexture("tile.png", 16, 16);
+		player = loadTexture("player.png", 16, 16);
+		spike = loadTexture("spike.png", 16, 16);
+		way = loadTexture("waypoint.png", 16, 16);
 	}
 	
 	/**
@@ -60,7 +72,7 @@ public class Art {
 		int letter=alpha.indexOf(msg.charAt(i));
 		int xx=letter%8;
 		int yy=letter/8;
-		//b.draw(alphabet[xx][yy], x+i*16, y);
+		b.draw(alphabet[xx][yy], x+i*16, y);
 		}
 	}
 	
