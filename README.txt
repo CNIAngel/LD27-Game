@@ -1,7 +1,7 @@
 **Ludum Dare #27**
 
 Title: RUSHER
-Progress: 45%?
+Progress: 30%?
 Theme: 10 Seconds
 
 *DEV LOG*
